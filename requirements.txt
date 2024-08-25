@@ -1,0 +1,8 @@
+requests
+requests_oauthlib
+pycurl
+pycurl_requests
+pandas
+xlsxwriter
+bs4
+selenium
