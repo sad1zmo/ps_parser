@@ -1,0 +1,16 @@
+[Unit]
+Description=Python Parser Service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ps_parser/
+ExecStart=/usr/bin/python3 -u main.py
+User=root
+Restart=always
+StandardOutput=file:/home/ps_parser/std.log
+StandardError=file:/home/ps_parser/std.log
+LimitNOFILE=1024
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
